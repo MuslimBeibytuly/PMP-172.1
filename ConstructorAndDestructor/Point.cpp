@@ -6,9 +6,9 @@ Point::Point()
 	std::cout << "Point()" << std::endl;
 }
 
-Point::Point(int _x, int _y, int _z)
+Point::Point(int x, int y, int z)
 {
-	x = _x, y = _y, z = _z;
+	this->x = x, this->y = y, this->z = z;
 	std::cout << "Point(int, int, int)" << std::endl;
 }
 
@@ -17,12 +17,12 @@ Point::~Point()
 	std::cout << "~Point()" << std::endl;
 }
 
-void Point::show()
+void Point::show() const
 {
 	std::cout << x << ' ' << y << ' ' << z << std::endl;
 }
 
-void Point::writePointToFile()
+void Point::writePointToFile() const
 {
 	std::ofstream out("point.txt");
 	out << x << ' ' << y << ' ' << z << std::endl;
@@ -45,7 +45,7 @@ Point & Point::getInstance()
 	return instance;
 }
 
-void Point::setX(int _x)
+void Point::setX(const int & x)
 {
-	x = _x;
+	this->x = x;
 }

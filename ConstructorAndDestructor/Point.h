@@ -9,9 +9,9 @@ private:
 	Point(int, int, int);
 public:
 	~Point();
-	void show();
-	void writePointToFile();
+	void show() const;
+	void writePointToFile() const;
 	void readPointFromFile();
 	static Point & getInstance();
-	void setX(int);
+	void setX(const int &);
 };
