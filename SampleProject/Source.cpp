@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Student.h"
 
 class Circle
 {
@@ -19,11 +20,22 @@ public:
 	}
 };
 
+void sample() {
+	Student s;
+	s.addMark(5);
+	s.addMark(4);
+	s.addMark(3);
+	s.addMark(2);
+	s.addMark(1);
+	s.addMark(6);
+	s.addMark(7);
+	std::cout << s.getAverageMark() << std::endl;
+	s.setFullname("Muslim Beibytuly");
+	std::cout << s.getFullname() << std::endl;
+}
+
 int main() {
-	Circle a;
-	a.setRadius(100);
-	std::cout << "radius: " << a.getRadius() << std::endl;
-	std::cout << "area: " << a.getArea() << std::endl;
+
 	system("pause");
 	return 0;
 }
