@@ -29,8 +29,14 @@ void Game::process()
 				break;
 			}
 		}
+		if (snake.eats(food.body)) 
+		{
+			snake.eat(food.body);
+			food.reinit();
+		}
 		snake.move();
 		snake.draw();
+		food.draw();
 		Sleep(200);
 	}
 }

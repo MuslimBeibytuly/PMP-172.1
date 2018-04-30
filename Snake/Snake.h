@@ -12,5 +12,7 @@ public:
 	~Snake();
 	void draw();
 	void move();
+	bool eats(const Coordinate &) const;
+	void eat(Coordinate);
 };
 

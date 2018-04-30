@@ -12,7 +12,7 @@ class Game
 	bool processing;
 public:
 	Game();
-	void process();
 	~Game();
+	void process();
 };
 

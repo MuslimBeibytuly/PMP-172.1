@@ -52,3 +52,13 @@ void Snake::move()
 	body[0].x += x;
 	body[0].y += y;
 }
+
+bool Snake::eats(const Coordinate & food) const
+{
+	return body[0].x == food.x && body[0].y == food.y;
+}
+
+void Snake::eat(Coordinate food)
+{
+	body.push_back(food);
+}
