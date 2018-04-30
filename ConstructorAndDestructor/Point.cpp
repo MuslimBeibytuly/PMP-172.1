@@ -21,3 +21,20 @@ void Point::show()
 {
 	std::cout << x << ' ' << y << ' ' << z << std::endl;
 }
+
+void Point::writePointToFile()
+{
+	std::ofstream out("point.txt");
+	out << x << ' ' << y << ' ' << z << std::endl;
+	out.close();
+}
+
+void Point::readPointFromFile()
+{
+	std::ifstream in("point.txt");
+	if (in.is_open()) 
+	{
+		in >> x >> y >> z;
+	}
+	in.close();
+}

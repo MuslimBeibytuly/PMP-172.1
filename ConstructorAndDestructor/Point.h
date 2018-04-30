@@ -9,4 +9,6 @@ public:
 	Point(int, int, int);
 	~Point();
 	void show();
+	void writePointToFile();
+	void readPointFromFile();
 };
