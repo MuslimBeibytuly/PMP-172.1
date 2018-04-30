@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Student.h"
-
+#include "ListOfStudents.h"
 class Circle
 {
 private:
@@ -34,8 +34,15 @@ void sample() {
 	std::cout << s.getFullname() << std::endl;
 }
 
-int main() {
-
+int main() 
+{
+	ListOfStudents l;
+	l.addStudent("AAA", 1);
+	l.addStudent("BBB", 2);
+	for (int i = 0; i < l.students.size(); ++i) 
+	{
+		std::cout << l.students[i].getFullname() << ' ' << l.students[i].getAge() << std::endl;
+	}
 	system("pause");
 	return 0;
 }

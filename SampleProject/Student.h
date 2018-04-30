@@ -13,4 +13,6 @@ public:
 	void addMark(int);
 	void setFullname(std::string);
 	std::string getFullname();
+	void setAge(int);
+	int getAge();
 };

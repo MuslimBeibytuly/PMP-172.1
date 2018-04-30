@@ -32,3 +32,13 @@ std::string Student::getFullname()
 {
 	return fullname;
 }
+
+void Student::setAge(int _age)
+{
+	age = _age;
+}
+
+int Student::getAge()
+{
+	return age;
+}
