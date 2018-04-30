@@ -1,15 +1,15 @@
 #include "Point.h"
 
 void sample() {
-	Point p1, p2(1, 2, 3);
-	std::cout << "p1: ";
+	Point & p1 = Point::getInstance();
 	p1.show();
-	std::cout << "p2: ";
+	p1.setX(5);
+	Point & p2 = Point::getInstance();
+	p1.show();
 	p2.show();
-	p2.writePointToFile();
-	p1.readPointFromFile();
-	std::cout << "p1 from p2: ";
+	p2.setX(10);
 	p1.show();
+	p2.show();
 }
 
 int main()

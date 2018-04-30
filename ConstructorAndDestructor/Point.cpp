@@ -38,3 +38,14 @@ void Point::readPointFromFile()
 	}
 	in.close();
 }
+
+Point & Point::getInstance()
+{
+	static Point instance;
+	return instance;
+}
+
+void Point::setX(int _x)
+{
+	x = _x;
+}
