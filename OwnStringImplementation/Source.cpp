@@ -15,5 +15,7 @@ void main()
 	x.print();
 	String y(x);
 	y.print();
-	system("pause");	
+	y.concat(x);
+	y.print();	
+	system("pause");
 }

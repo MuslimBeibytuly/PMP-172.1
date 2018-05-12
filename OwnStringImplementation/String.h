@@ -7,6 +7,8 @@ class String
 public:
 	explicit String();
 	explicit String(const String &);
+	/*void operator +=(const char &);
+	void operator +=(const String &);*/
 	~String();
 	size_t count() const;
 	void print() const;
