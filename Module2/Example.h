@@ -10,4 +10,3 @@ public:
 	int sum(int);
 	~Example();
 };
-

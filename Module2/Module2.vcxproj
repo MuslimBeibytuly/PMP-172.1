@@ -111,10 +111,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Example.cpp" />
+    <ClCompile Include="Simple2DArray.cpp" />
+    <ClCompile Include="SimpleArray.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Example.h" />
+    <ClInclude Include="Simple2DArray.h" />
+    <ClInclude Include="SimpleArray.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

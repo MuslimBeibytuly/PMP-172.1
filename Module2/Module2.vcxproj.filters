@@ -21,9 +21,21 @@
     <ClCompile Include="Example.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SimpleArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Simple2DArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Example.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Simple2DArray.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
