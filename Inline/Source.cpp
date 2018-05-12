@@ -7,5 +7,4 @@ inline int square(int x)
 
 void main()
 {
-	std::cout << square(5) << std::endl;
 }
