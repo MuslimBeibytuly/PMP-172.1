@@ -4,6 +4,10 @@ class B
 	int x, y;
 	char z;
 public:
+	explicit B(int x)
+	{
+		this->x = x;
+	}
 	void setZ(char z)
 	{
 		this->z = z;
