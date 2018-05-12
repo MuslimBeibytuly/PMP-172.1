@@ -38,7 +38,7 @@ void Game::process()
 		barrier.draw();
 		snake.draw();
 		food.draw();
-		if (snakeCrushes()) {
+		if (snakeCrushes() || snake.eatsEatself()) {
 			processing = false;
 		}
 		Sleep(200);
@@ -48,7 +48,7 @@ void Game::process()
 bool Game::snakeCrushes()
 {
 	for (Coordinate & c : barrier.body) {
-		if (c.x == snake.body[0].x && c.y == snake.body[0].y) 
+		if (c == snake.body[0]) 
 		{
 			return true;
 		}

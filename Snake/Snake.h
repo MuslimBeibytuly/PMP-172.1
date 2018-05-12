@@ -13,5 +13,6 @@ public:
 	void draw();
 	void move();
 	bool eats(const Coordinate &) const;
+	bool eatsEatself() const;
 	void eat(Coordinate);
 };

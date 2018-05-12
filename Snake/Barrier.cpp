@@ -20,8 +20,8 @@ Barrier::~Barrier()
 
 void Barrier::draw()
 {
-	for (int i = 0; i < body.size(); ++i)
+	for (Coordinate & c : body)
 	{
-		body[i].draw(sign);
+		c.draw(sign);
 	}
 }

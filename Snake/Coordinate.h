@@ -14,5 +14,6 @@ public:
 	void setX(short);
 	short getY() const;
 	void setY(short);
+	bool operator ==(const Coordinate &) const;
 };
 

@@ -44,3 +44,8 @@ void Coordinate::setY(short)
 {
 	this->y = y;
 }
+
+bool Coordinate::operator==(const Coordinate & c) const
+{
+	return this->x == c.x && this->y == c.y;
+}

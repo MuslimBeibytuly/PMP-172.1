@@ -7,9 +7,6 @@ Snake::Snake()
 	direction = Default;
 	sign = '*';
 	body.push_back(Coordinate(5, 5));
-	body.push_back(Coordinate(4, 5));
-	body.push_back(Coordinate(3, 5));
-	body.push_back(Coordinate(2, 5));
 }
 
 
@@ -55,7 +52,19 @@ void Snake::move()
 
 bool Snake::eats(const Coordinate & food) const
 {
-	return body[0].x == food.x && body[0].y == food.y;
+	return body[0] == food;
+}
+
+bool Snake::eatsEatself() const
+{
+	for (int i = 1; i < body.size(); ++i)
+	{
+		if (body[0] == body[i]) 
+		{
+			return true;
+		}
+	}
+	return false;
 }
 
 void Snake::eat(Coordinate food)
