@@ -1,10 +1,10 @@
 #pragma once
 class Simple2DArray
 {
+public:
 	int **a;
 	int n, m;
-public:
-	Simple2DArray();
+	Simple2DArray(int, int);
+	Simple2DArray(const Simple2DArray &);
 	~Simple2DArray();
 };
-

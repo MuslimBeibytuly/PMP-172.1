@@ -8,20 +8,15 @@ SimpleArray::SimpleArray(size_t size)
 	a = new int[size];
 }
 
-SimpleArray::SimpleArray(const SimpleArray & s)
+SimpleArray::SimpleArray(const SimpleArray & other)
 {
-	this->size = s.size;
+	this->size = other.size;
 	a = new int[size];
 	for (int i = 0; i < size; ++i) 
 	{
-		a[i] = s.a[i];
+		a[i] = other.a[i];
 	}
 }
-
-SimpleArray::SimpleArray()
-{
-}
-
 
 SimpleArray::~SimpleArray()
 {

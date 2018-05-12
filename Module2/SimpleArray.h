@@ -6,7 +6,6 @@ public:
 	size_t size;
 	SimpleArray(size_t);
 	SimpleArray(const SimpleArray &);
-	SimpleArray();
 	~SimpleArray();
 };
 
