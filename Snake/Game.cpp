@@ -29,18 +29,38 @@ void Game::process()
 				break;
 			}
 		}
-		if (snake.eats(food.body)) 
+		if (snake.eats(food.body))
 		{
 			snake.eat(food.body);
 			food.reinit();
 		}
 		snake.move();
+		barrier.draw();
 		snake.draw();
 		food.draw();
+		if (snakeCrushes()) {
+			processing = false;
+		}
 		Sleep(200);
 	}
 }
 
+bool Game::snakeCrushes()
+{
+	for (Coordinate & c : barrier.body) {
+		if (c.x == snake.body[0].x && c.y == snake.body[0].y) 
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+Game & Game::getInstance()
+{
+	static Game instance;
+	return instance;
+}
 
 Game::~Game()
 {

@@ -3,9 +3,9 @@
 #include "Coordinate.h"
 class Snake
 {
-	std::vector<Coordinate> body;
 	char sign;
 public:
+	std::vector<Coordinate> body;
 	enum Direction { Up, Down, Left, Right, Default };
 	Direction direction;
 	Snake();
@@ -15,4 +15,3 @@ public:
 	bool eats(const Coordinate &) const;
 	void eat(Coordinate);
 };
-

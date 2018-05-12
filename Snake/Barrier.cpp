@@ -4,9 +4,24 @@
 
 Barrier::Barrier()
 {
+	sign = '#';
+	for (short i = 0; i <= 20; ++i) {
+		body.push_back({ i, (short)1 });
+		body.push_back({ (short)1, i });
+		body.push_back({ i, (short)20 });
+		body.push_back({ (short)20, i });
+	}
 }
 
 
 Barrier::~Barrier()
 {
+}
+
+void Barrier::draw()
+{
+	for (int i = 0; i < body.size(); ++i)
+	{
+		body[i].draw(sign);
+	}
 }

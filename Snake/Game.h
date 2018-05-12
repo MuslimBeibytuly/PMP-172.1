@@ -5,14 +5,16 @@
 #include <iostream>
 class Game
 {
-	Snake snake;
 	Food food;
-	Barrier barrier;
 	int score;
 	bool processing;
-public:
 	Game();
+public:
+	Barrier barrier;
+	Snake snake;
 	~Game();
 	void process();
+	bool snakeCrushes();
+	static Game & getInstance();
 };
 
