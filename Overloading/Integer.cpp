@@ -33,9 +33,17 @@ void Integer::operator=(const Integer & i)
 	value = i.value;
 }
 
-bool Integer::operator==(const Integer & i) const
+
+std::ostream & operator<<(std::ostream & o, const Integer & i)
 {
-	return value == i.value;
+	o << i.value;
+	return o;
+}
+
+std::istream & operator >> (std::istream & is, Integer & i)
+{
+	is >> i.value;
+	return is;
 }
 
 Integer::operator int() const

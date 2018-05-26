@@ -1,10 +1,12 @@
 #pragma once
+#include "Integer.h"
 #include <cstdlib>
 class Vector
 {
 	int *data;
 	size_t size;
 public:
+	friend class Integer;
 	void push_back(const int &);
 	void operator+=(const int &);
 	void operator+=(const Vector &);

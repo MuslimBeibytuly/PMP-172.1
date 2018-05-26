@@ -2,6 +2,12 @@
 #include "Vector.h"
 #include "Integer.h"
 #include <cassert>
+
+bool operator==(const Integer & i1, const Integer & i2)
+{
+	return i1.value == i2.value;
+}
+
 void vector() 
 {
 	Vector v1, v2;
@@ -34,10 +40,11 @@ void integer1()
 	/*int a = 5;
 	std::cout << ++a << ' ' << a++ << std::endl;*/
 }
+
 void main() 
 {
 	Integer a = 5;
-	int x = (int)a;
-	std::cout << x << std::endl;
+	std::cin >> a;
+	std::cout << a << std::endl;
 	system("pause");
 }
