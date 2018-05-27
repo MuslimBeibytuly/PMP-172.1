@@ -8,8 +8,7 @@ public:
 	Type *data;
 	size_t size;
 	void operator +=(const Type &);
-	Type average(size_t position = 0, Type sum = 0);
-	/*char average(size_t position = 0, int sum = 0);*/
+	Type average();
 	DynamicArray();
 	~DynamicArray();
 	friend std::ostream & operator<<(std::ostream & stream, const DynamicArray<Type> & dynamicArray)
@@ -38,24 +37,25 @@ inline void DynamicArray<Type>::operator+=(const Type & value)
 }
 
 template<typename Type>
-inline Type DynamicArray<Type>::average(size_t position = 0, Type sum = 0)
+inline Type DynamicArray<Type>::average()
 {
-	if (position < size) 
-	{
-		return average(position + 1, sum + data[position]);
+	Type sum = 0;
+	for (size_t pos = 0; pos < size; ++pos) {
+		sum += data[pos];
 	}
 	return (sum / size);
 }
 
-//template<typename Type>
-//inline char DynamicArray<Type>::average(size_t position = 0, int sum = 0)
-//{
-//	if (position < size)
-//	{
-//		return average(position + 1, sum + data[position]);
-//	}
-//	return (char)(sum / size);
-//}
+template<>
+inline char DynamicArray<char>::average()
+{
+	int sum = 0;
+	for (size_t pos = 0; pos < size; ++pos) 
+	{
+		sum += data[pos];
+	}
+	return (char)(sum / size);
+}
 
 template<typename Type>
 inline DynamicArray<Type>::DynamicArray()

@@ -2,20 +2,21 @@
 #include <iostream>
 
 template <typename Type>
-Type average(const DynamicArray<Type> & x, size_t position = 0, Type sum = 0)
+Type average(const DynamicArray<Type> & x)
 {
-	if (position < x.size)
-	{
-		return average(x, position + 1, sum + x.data[position]);
+	Type sum = 0;
+	for (size_t pos = 0; pos < x.size; ++pos) {
+		sum += x.data[pos];
 	}
 	return (sum / x.size);
 }
 
-char average(const DynamicArray<char> & x, size_t position = 0, int sum = 0)
+template <>
+char average<char>(const DynamicArray<char> & x)
 {
-	if (position < x.size)
-	{
-		return average(x, position + 1, sum + x.data[position]);
+	int sum = 0;
+	for (size_t pos = 0; pos < x.size; ++pos) {
+		sum += x.data[pos];
 	}
 	return (char)(sum / x.size);
 }
@@ -28,7 +29,7 @@ void main()
 	x += 'c';
 	x += 'd';
 	x += 'e';
-	std::cout << average(x) << std::endl;
+	std::cout << x.average() << std::endl;
 
 	DynamicArray<int> y;
 	y += 1;
@@ -36,7 +37,7 @@ void main()
 	y += 3;
 	y += 4;
 	y += 5;
-	std::cout << average<int>(y) << std::endl;
+	std::cout << y.average() << std::endl;
 
 	system("pause");
 }
