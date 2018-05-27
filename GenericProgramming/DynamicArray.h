@@ -7,7 +7,8 @@ class DynamicArray
 public:
 	Type *data;
 	size_t size;
-	void operator +=(const Type &);
+	Type operator[](size_t);
+	void operator+=(const Type &);
 	Type average();
 	DynamicArray();
 	~DynamicArray();
@@ -20,6 +21,12 @@ public:
 		return stream;
 	}
 };
+
+template<typename Type>
+inline Type DynamicArray<Type>::operator[](size_t pos)
+{
+	return data[pos];
+}
 
 template<typename Type>
 inline void DynamicArray<Type>::operator+=(const Type & value)
@@ -50,7 +57,7 @@ template<>
 inline char DynamicArray<char>::average()
 {
 	int sum = 0;
-	for (size_t pos = 0; pos < size; ++pos) 
+	for (size_t pos = 0; pos < size; ++pos)
 	{
 		sum += data[pos];
 	}
