@@ -54,5 +54,10 @@ void main()
 	//std::cout << sum(1, 3, 23, 32.1) << std::endl;
 	MyString x = "abcde";
 	std::cout << x << std::endl;
+	/*for (char & c : x)
+	{
+		std::cout << c << ' ';
+	}*/
+	std::cin >> x;
 	system("pause");
 }
