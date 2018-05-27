@@ -16,4 +16,3 @@ public:
 	void setY(short);
 	bool operator ==(const Coordinate &) const;
 };
-
