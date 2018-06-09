@@ -1,9 +1,9 @@
 #pragma once
+#include "Element.h"
 template <class T>
 class Queue
 {
-	T *data;
-	size_t size;
+	Element<T> *head, *tail;
 public:
 	void enqueue(const T &);
 	T & dequeue();
@@ -14,35 +14,39 @@ public:
 template<class T>
 inline void Queue<T>::enqueue(const T & t)
 {
-	++size;
-	if (data == nullptr)
+	if (tail == nullptr) 
 	{
-		data = (T *)malloc(size * sizeof(T));
+		head = tail = new Element<T>(t);
 	}
-	else
+	else 
 	{
-		data = (T *)realloc(data, size * sizeof(T));
+		tail->next = new Element<T>(t);
+		tail = tail->next;
 	}
-	data[size - 1] = t;
 }
 
 template<class T>
 inline T & Queue<T>::dequeue()
 {
-	T temp = data[0];
-	++data, --size;
-	return temp;
+	T value = head->value;
+	if (head != nullptr)
+	{
+		head = head->next;
+	}
+	return value;
 }
 
 template<class T>
 inline Queue<T>::Queue()
 {
-	size = 0;
-	data = nullptr;
+	head = tail = nullptr;
 }
 
 template<class T>
 inline Queue<T>::~Queue()
 {
-	delete[] data;
+	if (head != nullptr) 
+	{
+		delete head;
+	}
 }
