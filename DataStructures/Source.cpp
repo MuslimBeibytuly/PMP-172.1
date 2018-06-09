@@ -3,6 +3,7 @@
 //#include "LinkedList.h"
 //#include "DoubleLinkedList.h"
 #include "BST.h"
+#include <set>
 #include <iostream>
 #include <cassert>
 //void stack()
@@ -41,13 +42,35 @@
 //	d.addToHead(4);
 //	assert(d.deleteFromHead() == 4);
 //}
+//void bst() 
+//{
+//	BST<int> t;
+//	t.add(4);
+//	t.add(5);
+//	t.add(3);
+//	t.add(6);
+//	t.print();
+//	std::cout << t.search(6) << std::endl;
+//	assert(t.search(6) == 3);
+//	assert(t.search(0) == 0);
+//	t.remove(5);
+//	t.print();
+//}
 void main()
 {
-	BST<int> t;
-	t.add(4);
-	t.add(5);
-	t.add(3);
-	t.add(6);
-	t.print();
+	//set, multiset, unordered_set
+	std::set<int> s;
+	s.insert(5);
+	s.insert(9);
+	s.insert(1);
+	s.insert(6);
+	s.insert(3);
+	s.insert(2);
+	s.insert(5);
+	for (auto i : s)
+	{
+		std::cout << i << ' ';
+	}
+	std::cout << std::endl;
 	system("pause");
 }
