@@ -68,11 +68,18 @@ inline T & LinkedList<T>::deleteFromTail()
 {
 	T temp = tail->value;
 	Element<T> *it = head;
-	for (; it->next != tail; it = it->next)
-	{
+	if (head == tail) {
+		delete head;
+		tail = head = nullptr;
 	}
-	delete it->next;
-	it->next = nullptr;
-	tail = it;
-	return temp;
+	else 
+	{
+		for (; it->next != tail; it = it->next)
+		{
+		}
+		delete it->next;
+		it->next = nullptr;
+		tail = it;
+		return temp;
+	}
 }
