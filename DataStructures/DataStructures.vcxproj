@@ -110,14 +110,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BST.h" />
+    <ClInclude Include="DoubleLinkedList.h" />
     <ClInclude Include="Element.h" />
+    <ClInclude Include="ExtraElement.h" />
     <ClInclude Include="LinkedList.h" />
+    <ClInclude Include="Node.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="Stack.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BST.cpp" />
+    <ClCompile Include="DoubleLinkedList.cpp" />
     <ClCompile Include="Element.cpp" />
+    <ClCompile Include="ExtraElement.cpp" />
     <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="Node.cpp" />
     <ClCompile Include="Queue.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Stack.cpp" />
