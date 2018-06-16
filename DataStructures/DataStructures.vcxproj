@@ -117,6 +117,7 @@
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="Queue.h" />
+    <ClInclude Include="SomeStructure.h" />
     <ClInclude Include="Stack.h" />
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +128,7 @@
     <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="Queue.cpp" />
+    <ClCompile Include="SomeStructure.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Stack.cpp" />
   </ItemGroup>

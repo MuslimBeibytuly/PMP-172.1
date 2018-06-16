@@ -29,9 +29,9 @@ void Game::process()
 				break;
 			}
 		}
-		if (snake.eats(food.body))
+		if (snake.eats(food.body[0]))
 		{
-			snake.eat(food.body);
+			snake.eat(food.body[0]);
 			food.reinit();
 		}
 		snake.move();

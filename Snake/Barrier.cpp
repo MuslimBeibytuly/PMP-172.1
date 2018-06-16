@@ -1,7 +1,5 @@
 #include "Barrier.h"
 
-
-
 Barrier::Barrier()
 {
 	sign = '#';
@@ -13,15 +11,6 @@ Barrier::Barrier()
 	}
 }
 
-
 Barrier::~Barrier()
 {
-}
-
-void Barrier::draw()
-{
-	for (Coordinate & c : body)
-	{
-		c.draw(sign);
-	}
 }

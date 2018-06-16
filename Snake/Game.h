@@ -17,4 +17,3 @@ public:
 	bool snakeCrushes();
 	static Game & getInstance();
 };
-

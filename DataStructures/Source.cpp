@@ -3,6 +3,7 @@
 //#include "LinkedList.h"
 //#include "DoubleLinkedList.h"
 #include "BST.h"
+#include "SomeStructure.h"
 #include <set>
 #include <iostream>
 #include <cassert>
@@ -59,18 +60,20 @@
 void main()
 {
 	//set, multiset, unordered_set
-	std::set<int> s;
-	s.insert(5);
-	s.insert(9);
-	s.insert(1);
-	s.insert(6);
-	s.insert(3);
-	s.insert(2);
-	s.insert(5);
-	for (auto i : s)
-	{
-		std::cout << i << ' ';
-	}
+	//std::set<int> s;
+	//s.insert(5);
+	//s.insert(9);
+	//s.insert(1);
+	//s.insert(6);
+	//s.insert(3);
+	//s.insert(2);
+	//s.insert(5);
+	//for (auto i : s)
+	//{
+	//	std::cout << i << ' ';
+	//}
+	SomeStructure<int> s;
+
 	std::cout << std::endl;
 	system("pause");
 }

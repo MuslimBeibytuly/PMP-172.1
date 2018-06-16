@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{64A2F397-EE21-457E-8B73-25DC3FFFA5AF}</ProjectGuid>
-    <RootNamespace>Snake</RootNamespace>
+    <ProjectGuid>{DDFDA3A6-C8D6-40E8-9576-17C01973BD7D}</ProjectGuid>
+    <RootNamespace>AdvancedOOP</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -110,21 +110,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Barrier.cpp" />
-    <ClCompile Include="Coordinate.cpp" />
-    <ClCompile Include="Food.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="IDrawable.cpp" />
-    <ClCompile Include="Snake.cpp" />
     <ClCompile Include="Source.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Barrier.h" />
-    <ClInclude Include="Coordinate.h" />
-    <ClInclude Include="Food.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="IDrawable.h" />
-    <ClInclude Include="Snake.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

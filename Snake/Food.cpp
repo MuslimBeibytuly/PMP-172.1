@@ -4,25 +4,19 @@
 Food::Food()
 {
 	sign = '#';
-	body = { rand() % 18 + 2, rand() % 18 + 2 };
+	body.push_back({ rand() % 18 + 2, rand() % 18 + 2 });
 }
 
 void Food::reinit()
 {
-	body = { rand() % 18 + 2, rand() % 18 + 2 };
+	body[0] = { rand() % 18 + 2, rand() % 18 + 2 };
 	for (Coordinate coordinate : Game::getInstance().snake.body) {
-		if (body == coordinate)
+		if (body[0] == coordinate)
 		{
 			reinit();
 		}
 	}
 }
-
-void Food::draw()
-{
-	body.draw(sign);
-}
-
 
 Food::~Food()
 {

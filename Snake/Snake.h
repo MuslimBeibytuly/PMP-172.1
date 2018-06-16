@@ -1,16 +1,13 @@
 #pragma once
-#include <vector>
-#include "Coordinate.h"
+#include "IDrawable.h"
 class Snake
+	: public IDrawable
 {
-	char sign;
 public:
-	std::vector<Coordinate> body;
 	enum Direction { Up, Down, Left, Right, Default };
 	Direction direction;
 	Snake();
 	~Snake();
-	void draw();
 	void move();
 	bool eats(const Coordinate &) const;
 	bool eatsEatself() const;

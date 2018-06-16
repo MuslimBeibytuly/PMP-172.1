@@ -14,14 +14,6 @@ Snake::~Snake()
 {
 }
 
-void Snake::draw()
-{
-	for (int i = 0; i < body.size(); ++i)
-	{
-		body[i].draw(sign);
-	}
-}
-
 void Snake::move()
 {
 	int x = 0, y = 0;

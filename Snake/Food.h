@@ -1,13 +1,11 @@
 #pragma once
-#include "Coordinate.h"
+#include "IDrawable.h"
 class Food
+	: public IDrawable
 {
-	char sign;
 public:
-	Coordinate body;
 	Food();
 	~Food(); 
 	void reinit();
-	void draw();
 };
 

@@ -1,13 +1,10 @@
 #pragma once
-#include "Coordinate.h"
-#include <vector>
+#include "IDrawable.h"
 class Barrier
+	: public IDrawable
 {
-	char sign;
 public:
-	std::vector<Coordinate> body;
 	Barrier();
 	~Barrier();
-	void draw();
 };
 
