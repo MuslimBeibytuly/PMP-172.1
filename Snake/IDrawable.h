@@ -5,8 +5,7 @@ class IDrawable
 {
 public:
 	char sign;
-	std::vector<Coordinate> body;
-	void draw();
+	virtual void draw() = 0;
 	IDrawable();
 	virtual ~IDrawable();
 };

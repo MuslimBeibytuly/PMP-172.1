@@ -1,7 +1,7 @@
 #pragma once
-#include "IDrawable.h"
+#include "IDrawableVector.h"
 class Barrier
-	: public IDrawable
+	: public IDrawableVector
 {
 public:
 	Barrier();

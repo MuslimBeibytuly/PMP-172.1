@@ -1,7 +1,7 @@
 #pragma once
-#include "IDrawable.h"
+#include "IDrawableVector.h"
 class Snake
-	: public IDrawable
+	: public IDrawableVector
 {
 public:
 	enum Direction { Up, Down, Left, Right, Default };

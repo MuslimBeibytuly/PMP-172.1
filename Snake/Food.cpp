@@ -18,6 +18,11 @@ void Food::reinit()
 	}
 }
 
+void Food::draw()
+{
+	body.draw(sign);
+}
+
 Food::~Food()
 {
 }
