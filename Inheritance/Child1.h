@@ -5,7 +5,7 @@ class Child1
 {
 public:
 	std::string info();
-	Child1();
+	Child1(const std::string & text);
 	~Child1();
 };
 

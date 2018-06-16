@@ -4,7 +4,8 @@
 class Base
 {
 public:
+	std::string text;
 	virtual std::string info();
-	Base();
+	Base(const std::string & text);
 	virtual ~Base();
 };

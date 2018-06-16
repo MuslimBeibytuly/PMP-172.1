@@ -5,12 +5,10 @@ std::string Base::info()
 	return "I'm Base class";
 }
 
-Base::Base()
+Base::Base(const std::string & text) : text(text)
 {
-	std::cout << "Base()" << std::endl;
 }
 
 Base::~Base()
 {
-	std::cout << "~Base()" << std::endl;
 }
