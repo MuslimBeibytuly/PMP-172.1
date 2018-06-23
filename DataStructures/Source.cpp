@@ -76,7 +76,7 @@ void stack()
 		s.push(1);
 		s.push(1);
 	}
-	catch (const std::exception & e) 
+	catch (const std::exception & e)
 	{
 		assert(std::string(e.what()) == std::string("StackOverflowException"));
 	}
