@@ -13,7 +13,8 @@ public:
 	}
 };
 
-int divide(const int & i, const int & j) {
+int divide(const int & i, const int & j) 
+{
 	if (j == 0)
 	{
 		throw DivisionByZeroException();
@@ -71,5 +72,3 @@ void main()
 	}*/
 	system("pause");
 }
-
-//"123567342"

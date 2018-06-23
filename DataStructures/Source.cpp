@@ -1,4 +1,4 @@
-//#include "Stack.h"
+#include "Stack.h"
 //#include "Queue.h"
 //#include "LinkedList.h"
 //#include "DoubleLinkedList.h"
@@ -57,23 +57,33 @@
 //	t.remove(5);
 //	t.print();
 //}
+void stack()
+{
+	Stack<int> s;
+	try 
+	{
+		s.pop();
+	}
+	catch (const std::underflow_error & e) 
+	{
+		assert(std::string(e.what()) == std::string("stack is empty"));
+	}
+	try 
+	{
+		s.push(1);
+		s.push(1);
+		s.push(1);
+		s.push(1);
+		s.push(1);
+	}
+	catch (const std::exception & e) 
+	{
+		assert(std::string(e.what()) == std::string("StackOverflowException"));
+	}
+}
 void main()
 {
-	//set, multiset, unordered_set
-	//std::set<int> s;
-	//s.insert(5);
-	//s.insert(9);
-	//s.insert(1);
-	//s.insert(6);
-	//s.insert(3);
-	//s.insert(2);
-	//s.insert(5);
-	//for (auto i : s)
-	//{
-	//	std::cout << i << ' ';
-	//}
-	SomeStructure<int> s;
-
+	stack();
 	std::cout << std::endl;
 	system("pause");
 }
