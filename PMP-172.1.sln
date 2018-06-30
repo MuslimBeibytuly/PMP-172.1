@@ -47,6 +47,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "typeid", "typeid\typeid.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "STL", "STL\STL.vcxproj", "{BC761F1F-2577-4256-B030-8FFFF91A4842}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Game", "Game\Game.vcxproj", "{DEFD30FD-F33F-4C1A-94F9-68F3203BEC11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -231,6 +233,14 @@ Global
 		{BC761F1F-2577-4256-B030-8FFFF91A4842}.Release|x64.Build.0 = Release|x64
 		{BC761F1F-2577-4256-B030-8FFFF91A4842}.Release|x86.ActiveCfg = Release|Win32
 		{BC761F1F-2577-4256-B030-8FFFF91A4842}.Release|x86.Build.0 = Release|Win32
+		{DEFD30FD-F33F-4C1A-94F9-68F3203BEC11}.Debug|x64.ActiveCfg = Debug|x64
+		{DEFD30FD-F33F-4C1A-94F9-68F3203BEC11}.Debug|x64.Build.0 = Debug|x64
+		{DEFD30FD-F33F-4C1A-94F9-68F3203BEC11}.Debug|x86.ActiveCfg = Debug|Win32
+		{DEFD30FD-F33F-4C1A-94F9-68F3203BEC11}.Debug|x86.Build.0 = Debug|Win32
+		{DEFD30FD-F33F-4C1A-94F9-68F3203BEC11}.Release|x64.ActiveCfg = Release|x64
+		{DEFD30FD-F33F-4C1A-94F9-68F3203BEC11}.Release|x64.Build.0 = Release|x64
+		{DEFD30FD-F33F-4C1A-94F9-68F3203BEC11}.Release|x86.ActiveCfg = Release|Win32
+		{DEFD30FD-F33F-4C1A-94F9-68F3203BEC11}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
