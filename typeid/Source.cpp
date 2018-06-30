@@ -35,6 +35,7 @@ int main()
 	const int *m = &n;
 	int g = 6;
 	m = const_cast<int *>(&g);
+
 	system("pause");
 	return 0;
 }
